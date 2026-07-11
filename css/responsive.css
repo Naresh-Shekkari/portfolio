@@ -1,0 +1,253 @@
+/* Tablet Screens (768px and below) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 0.5rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 0;
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-large {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-large:nth-child(even) {
+        direction: ltr;
+    }
+
+    .project-image-large {
+        min-height: 250px;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .image-placeholder-large {
+        min-height: 300px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+    /* Container Padding */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navbar */
+    .navbar .container {
+        padding: 0.75rem 15px;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    /* Skills Section */
+    .skills {
+        padding: 2rem 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    /* Projects Large */
+    .project-card-large {
+        gap: 1rem;
+    }
+
+    .project-image-large {
+        min-height: 200px;
+    }
+
+    .project-content-large {
+        padding: 1.5rem;
+    }
+
+    .project-content-large h3 {
+        font-size: 1.25rem;
+    }
+
+    /* About Section */
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        gap: 1rem;
+    }
+
+    .timeline-item:not(:last-child)::before {
+        bottom: -30px;
+    }
+
+    /* Education Grid */
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 2rem 0;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 2rem 0;
+    }
+
+    .cta h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Screens (320px and below) */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
