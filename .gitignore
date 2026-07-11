@@ -1,6 +1,9 @@
 # OS
 .DS_Store
 Thumbs.db
+.env
+.env.local
+*.log
 
 # IDE
 .vscode/
@@ -8,16 +11,21 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# Dependencies
+# Node
 node_modules/
+package-lock.json
+yarn.lock
 
 # Build
 dist/
 build/
+.cache/
 
-# Environment
-.env
-.env.local
+# Dependencies
+lib/
 
-# Logs
-*.log
+# Misc
+.git
+.gitignore
+DESKTOP.ini
+.directory

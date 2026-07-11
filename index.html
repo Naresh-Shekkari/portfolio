@@ -3,123 +3,499 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Naresh Shekkari - Full Stack Developer & Creative Problem Solver">
-    <meta name="keywords" content="Developer, Portfolio, Web Developer, Full Stack">
-    <title>Naresh Shekkari - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Naresh Shekkari - Full Stack Developer | Building innovative digital solutions">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, Software Engineer, Portfolio">
+    <meta name="author" content="Naresh Shekkari">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Naresh Shekkari - Full Stack Developer">
+    <meta property="og:description" content="Explore my portfolio of innovative web projects and technical expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naresh-shekkari.github.io/portfolio">
+    <meta property="og:image" content="https://naresh-shekkari.github.io/portfolio/assets/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Naresh Shekkari - Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Developer | Building innovative digital solutions">
+    <meta name="twitter:image" content="https://naresh-shekkari.github.io/portfolio/assets/og-image.png">
+    
+    <title>Naresh Shekkari - Full Stack Developer Portfolio</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' width='100' height='100'/><text x='50' y='65' font-size='50' font-weight='bold' text-anchor='middle' fill='white' font-family='monospace'>NS</text></svg>">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Naresh Shekkari",
+        "url": "https://naresh-shekkari.github.io/portfolio",
+        "jobTitle": "Full Stack Developer",
+        "sameAs": [
+            "https://github.com/Naresh-Shekkari",
+            "https://linkedin.com/in/naresh-shekkari"
+        ],
+        "email": "naresh@example.com"
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Naresh Shekkari</div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">NS</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm Naresh Shekkari</h1>
-            <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver | Tech Enthusiast</p>
-            <div class="hero-buttons">
-                <a href="about.html" class="btn btn-primary">Learn More</a>
-                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Naresh Shekkari</span></h1>
+                    <p class="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+                    <p class="hero-description">I build modern, scalable web applications with cutting-edge technologies. Passionate about clean code, user experience, and continuous learning.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value">50+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">6+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">React</div>
+                    <div class="floating-card card-2">Node.js</div>
+                    <div class="floating-card card-3">MongoDB</div>
+                    <div class="code-block"></div>
+                </div>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="image-placeholder">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="95" fill="#6366f1" opacity="0.1"/>
-                    <circle cx="100" cy="100" r="85" fill="#6366f1" opacity="0.05"/>
-                    <text x="100" y="110" text-anchor="middle" font-size="24" fill="#6366f1">NS</text>
-                </svg>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a full-stack developer with a passion for creating elegant solutions to complex problems. With over 6 years of experience in web development, I've worked with startups and enterprises to build scalable applications.</p>
+                    <p>My journey started with curiosity about how things work on the web. Today, I combine technical expertise with creative thinking to deliver exceptional digital experiences.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h4>🎯 Strategic Thinking</h4>
+                            <p>Align technical solutions with business goals</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>🚀 Performance First</h4>
+                            <p>Optimize for speed, scalability, and reliability</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4>🤝 Team Collaboration</h4>
+                            <p>Work effectively with cross-functional teams</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="150" cy="120" r="60" fill="url(#grad1)" opacity="0.2"/>
+                            <circle cx="150" cy="120" r="50" fill="url(#grad1)" opacity="0.3"/>
+                            <rect x="100" y="70" width="100" height="100" fill="none" stroke="url(#grad1)" stroke-width="2" rx="10"/>
+                            <text x="150" y="135" text-anchor="middle" font-size="48" font-weight="bold" fill="url(#grad1)" font-family="monospace">NS</text>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
+                <div class="skill-category">
                     <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React, Vue.js, Responsive Design</p>
+                    <div class="skill-items">
+                        <span class="skill-tag">React/Vue.js</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Redux/Vuex</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
+                <div class="skill-category">
                     <h3>Backend</h3>
-                    <p>Node.js, Python, Express, Django, REST APIs</p>
+                    <div class="skill-items">
+                        <span class="skill-tag">Node.js/Express</span>
+                        <span class="skill-tag">Python/Django</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">WebSockets</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
+                <div class="skill-category">
                     <h3>Databases</h3>
-                    <p>MySQL, MongoDB, PostgreSQL, Firebase</p>
+                    <div class="skill-items">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Mobile</h3>
-                    <p>React Native, Flutter, Cross-platform Development</p>
+                <div class="skill-category">
+                    <h3>DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">AWS/GCP</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Nginx</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-projects">
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                        <p class="timeline-company">Tech Solutions Inc.</p>
+                        <p class="timeline-period">2022 - Present</p>
+                        <p class="timeline-description">Leading development of high-performance web applications. Architected microservices infrastructure and mentored junior developers. Improved application performance by 40% through optimization techniques.</p>
+                        <div class="timeline-skills">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Digital Innovations Ltd.</p>
+                        <p class="timeline-period">2020 - 2022</p>
+                        <p class="timeline-description">Developed end-to-end web applications for diverse clients. Implemented responsive designs and optimized database queries. Collaborated with design and product teams to deliver exceptional user experiences.</p>
+                        <div class="timeline-skills">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior Frontend Developer</h3>
+                        <p class="timeline-company">Creative Web Studio</p>
+                        <p class="timeline-period">2018 - 2020</p>
+                        <p class="timeline-description">Built responsive user interfaces with modern frameworks. Participated in code reviews and improved code quality. Contributed to open-source projects and enhanced technical skills.</p>
+                        <div class="timeline-skills">
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>React</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration and admin dashboard.</p>
-                        <a href="projects.html" class="project-link">View Project →</a>
+                <article class="project-card" data-tech="React,Node.js,MongoDB">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>Collaborative task management application with real-time updates and notifications.</p>
-                        <a href="projects.html" class="project-link">View Project →</a>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard. Achieved 98% uptime and 1M+ daily transactions.</p>
+                        <div class="project-stats">
+                            <span>📊 1M+ Transactions/Day</span>
+                            <span>⚡ 0.8s Load Time</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                </article>
+
+                <article class="project-card" data-tech="Vue.js,Firebase,Tailwind">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
+                    </div>
                     <div class="project-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Data visualization dashboard for real-time analytics and business insights.</p>
-                        <a href="projects.html" class="project-link">View Project →</a>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">Real-time collaborative task management with team workspaces. Features include task assignment, progress tracking, and notifications. Supports 1000+ concurrent users.</p>
+                        <div class="project-stats">
+                            <span>👥 1000+ Concurrent Users</span>
+                            <span>🚀 Real-time Sync</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="center">
-                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+                </article>
+
+                <article class="project-card" data-tech="React,D3.js,PostgreSQL">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">Enterprise analytics platform with interactive visualizations and real-time data processing. Handles 100GB+ datasets with advanced filtering and reporting capabilities.</p>
+                        <div class="project-stats">
+                            <span>📈 100GB+ Data</span>
+                            <span>🔍 Real-time Analytics</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tech="Next.js,TypeScript,Stripe">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tech">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Stripe</span>
+                        </div>
+                        <h3 class="project-title">SaaS Platform</h3>
+                        <p class="project-description">Subscription-based SaaS with multi-tenancy architecture. Integrated payment processing, user authentication, and billing management. Processes $2M+ annually.</p>
+                        <div class="project-stats">
+                            <span>💰 $2M+ Revenue</span>
+                            <span>🔐 Enterprise Security</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tech="Python,Django,Celery">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>Celery</span>
+                        </div>
+                        <h3 class="project-title">Data Processing Pipeline</h3>
+                        <p class="project-description">Automated data pipeline for processing and analyzing large datasets. Implemented background job processing with Celery and improved data accuracy by 99.9%.</p>
+                        <div class="project-stats">
+                            <span>🔄 Automated Workflow</span>
+                            <span>✅ 99.9% Accuracy</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tech="React Native,Firebase">
+                    <div class="project-image">
+                        <div class="image-gradient" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%)"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" aria-label="View project">→</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                        </div>
+                        <h3 class="project-title">Mobile Social App</h3>
+                        <p class="project-description">Cross-platform mobile application with real-time messaging and social features. Downloaded 500K+ times with 4.8★ rating across app stores.</p>
+                        <div class="project-stats">
+                            <span>📱 500K+ Downloads</span>
+                            <span>⭐ 4.8★ Rating</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <h2>Ready to Work Together?</h2>
-            <p>Let's build something amazing together. Get in touch with me today!</p>
-            <a href="contact.html" class="btn btn-light">Start a Project</a>
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:naresh@example.com">naresh@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/naresh-shekkari" target="_blank" rel="noopener noreferrer">@naresh-shekkari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Naresh-Shekkari" target="_blank" rel="noopener noreferrer">@Naresh-Shekkari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐦</div>
+                        <div class="contact-details">
+                            <h3>Twitter</h3>
+                            <a href="https://twitter.com/naresh_shekkari" target="_blank" rel="noopener noreferrer">@naresh_shekkari</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -129,32 +505,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Naresh Shekkari</h4>
-                    <p>Full Stack Developer & Creative Problem Solver</p>
+                    <p>Full Stack Developer | Building the future of web</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Me</h4>
+                    <h4>Social</h4>
                     <div class="social-links">
-                        <a href="#" target="_blank">GitHub</a>
-                        <a href="#" target="_blank">LinkedIn</a>
-                        <a href="#" target="_blank">Twitter</a>
+                        <a href="https://github.com/Naresh-Shekkari" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/naresh-shekkari" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://twitter.com/naresh_shekkari" target="_blank" rel="noopener noreferrer">Twitter</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Naresh Shekkari. All rights reserved.</p>
+                <p class="footer-credit">Built with <span class="heart">❤</span> using modern web technologies</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="js/utils/constants.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/modules/theme.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/scroll.js"></script>
+    <script src="js/modules/observer.js"></script>
+    <script src="js/modules/form.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
